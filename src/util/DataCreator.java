@@ -21,4 +21,16 @@ public class DataCreator {
         }
         return arr;
     }
+
+    public static int[] getUnsortedIntegerArray(int numberElements, boolean onlyPositive) {
+        int[] arr = new int[numberElements];
+        for (int i = 0; i < numberElements; i++) {
+            if (onlyPositive) {
+                arr[i] = (int) (Math.random() * numberElements);
+            } else {
+                arr[i] = (int) ((Math.random() * i) - (Math.random() * i));
+            }
+        }
+        return arr;
+    }
 }
